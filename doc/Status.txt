@@ -1,0 +1,20 @@
+====== Planing
+
+====== Requirements and analyse
+- Coins list
+- Coins Administration
+- Find an exchange source socket configuration
+- Subscription to exchange socket
+- Define mongodb db schema
+- Provide web services that can fetch and filter coin's price changes based on its name and change date
+- Designing swagger APIs
+- Provide a websocket channel for broadcasting coin price changes
+
+====== Design and Prototyping
+
+Architecture: web service and web socket
+User Interface: No UI
+Platforms: Any
+Programming: NodeJS, ExpressJS, Mongodb, Swagger
+Communications: localhost
+Security: API key
