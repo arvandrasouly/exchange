@@ -8,6 +8,7 @@ import methodOverride from "method-override";
 import debug from "debug";
 import api from "./api";
 import swagger from "./common/swagger"
+import websocket from "./websocket";
 
 // loading environment variables
 dotenv.config()
@@ -22,7 +23,7 @@ const server = express()
 const logger = dev? morgan("dev") : morgan("common")
 server.use(logger)
 
-const appDebug = debug('farm:server')
+//const appDebug = debug('farm:server')
 // server.use(appDebug)
 
 server.set('port', port)
@@ -52,7 +53,7 @@ const onAppError = (error) => {
 }
 server.on('error', onAppError)
 
-//
+
 if (!dev) {
   server.set('trust proxy', 1); // sets req.hostname, req.ip
 }
@@ -82,6 +83,9 @@ api(server)
 
 // Create server
 const httpServer = httpModule.createServer(server);
+
+//Initialize websocket
+websocket(server)
 
 // handle unhandled routes
 server.get('*', (req, res) => {
