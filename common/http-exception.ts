@@ -3,8 +3,6 @@ export default class HttpException extends Error {
     status?: number
     message: string
     error: string | null
-
-
     constructor(statusCode: number, message: string, error?: string) {
         super(error);
 
