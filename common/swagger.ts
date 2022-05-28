@@ -20,14 +20,14 @@ function swagger(server) {
                 },
             ],
         },
-        apis: ["./doc/swagger/coin.js"],
+        apis: ["../doc/swagger/coin.yaml"],
     };
 
     const specs = swaggerJsdoc(options);
     server.use(
         "/api-docs",
         swaggerUi.serve,
-        swaggerUi.setup(specs)
+        swaggerUi.setup(specs, { explorer: true })
     );
 }
 
