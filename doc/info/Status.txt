@@ -1,4 +1,5 @@
 ====== Planing
+- Goals: According to received scenario
 
 ====== Requirements and analyse
 - Coins list
@@ -18,3 +19,17 @@ Platforms: Any
 Programming: NodeJS, ExpressJS, Mongodb, Swagger
 Communications: localhost
 Security: API key
+
+
+====== Development
+
+- Created a repository on GitHub.com
+- Pulled the project
+- Imported a boilerplate for ExpressJS to project root
+- NPM packages added
+- Created doc directory to store documents
+- Added Swagger-UI library
+- Started and tested boilerplate ExpressJS
+- Initialized Swagger
+- Added MongoDB library
+- Added WebSocket  library
